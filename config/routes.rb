@@ -11,5 +11,9 @@ Rails.application.routes.draw do
   delete '/sign-out' => 'users#signout'
   patch '/change-password' => 'users#changepw'
 
-  get '/todos' => 'todos#index'
+  get '/todo_lists' => 'todo_lists#index'
+  get '/todo_lists/:id' => 'todo_lists#show'
+  post '/todo_lists' => 'todo_lists#create'
+  patch '/todo_lists/:id' => 'todo_lists#update'
+  delete '/todo_lists/:id' => 'lists#destroy'
 end
