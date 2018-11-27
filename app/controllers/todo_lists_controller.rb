@@ -1,4 +1,4 @@
-class TodoListsController < ApplicationController
+class TodoListsController < ProtectedController
   before_action :set_todo_list, only: %i[show update destroy]
 
   # GET /todo_lists
@@ -15,7 +15,7 @@ class TodoListsController < ApplicationController
 
   # POST /todo_lists
   def create
-    @todo_list = TodoList.new(todo_list_params)
+    @todo_list = current_user.TodoList.new(todo_list_params)
 
     if @todo_list.save
       render json: @todo_list, status: :created, location: @todo_list
@@ -38,14 +38,15 @@ class TodoListsController < ApplicationController
     @todo_list.destroy
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_todo_list
-      @todo_list = TodoList.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_todo_list
+    @todo_list = current_user.TodoList.find(params[:id])
+  end
 
-    # Only allow a trusted parameter "white list" through.
-    def todo_list_params
-      params.require(:todo_list).permit(:title, :description)
-    end
+  # Only allow a trusted parameter "white list" through.
+  def todo_list_params
+    params.require(:todo_list).permit(:title, :description)
+  end
+
+  private :set_todo_list, :todo_list_params
 end
