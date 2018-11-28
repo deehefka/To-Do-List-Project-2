@@ -15,7 +15,8 @@ class TodoListsController < OpenReadController
 
   # POST /todo_lists
   def create
-    @todo_list = current_user.TodoList.new(todo_list_params)
+    # binding.pry
+    @todo_list = current_user.todo_lists.new(todo_list_params)
 
     if @todo_list.save
       render json: @todo_list, status: :created, location: @todo_list
@@ -40,12 +41,12 @@ class TodoListsController < OpenReadController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_todo_list
-    @todo_list = current_user.TodoList.find(params[:id])
+    @todo_list = current_user.todo_lists.find(params[:id])
   end
 
   # Only allow a trusted parameter "white list" through.
   def todo_list_params
-    params.require(:todo_list).permit(:title, :description)
+    params.require(:todo_list).permit(:title, :description, :user_id)
   end
 
   private :set_todo_list, :todo_list_params
