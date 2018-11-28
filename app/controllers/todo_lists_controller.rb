@@ -1,4 +1,4 @@
-class TodoListsController < ProtectedController
+class TodoListsController < OpenReadController
   before_action :set_todo_list, only: %i[show update destroy]
 
   # GET /todo_lists
