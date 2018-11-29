@@ -2,13 +2,26 @@ To-Do List - Full Stack Project #2
 
 https://to-do-project-2.herokuapp.com/ https://git.heroku.com/to-do-project-2.git
 
+<<<<<<< HEAD
 This project will be an attempt to create a back end that creates to-do lists for the user. This would be a valuable application for anyone needing to keep track of their life.
+=======
+This project will be an attempt to create a front and back end that creates to-do lists for the user. This would be a valuable application for anyone needing to keep track of their life.
+
+The Front End:
+
+The Back End:
+>>>>>>> development
 
 Unsolved problems:
 
 Technologies used:
 
+<<<<<<< HEAD
 Ruby on Rails, Postgresql, Heroku, Git Hub
+=======
+HTML, CSS, Ruby
+Heroku, Git Hub
+>>>>>>> development
 
 User Stories:
 
