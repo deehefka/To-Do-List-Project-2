@@ -1,24 +1,18 @@
 To-Do List - Full Stack Project #2
 
-https://to-do-project-2.herokuapp.com/ https://git.heroku.com/to-do-project-2.git
+https://to-do-project-2.herokuapp.com/
+https://deehefka.github.io/To-Do-List-Project-2-Client-Repo/
 
 This project will be an attempt to create a front and back end that creates to-do lists for the user. This would be a valuable application for anyone needing to keep track of their life.
 
-The Front End:
-
-The Back End:
-
-
 Unsolved problems:
+
+I think I got everything working...?
+I'd like to add more to this eventually - maybe a calendar or way to add a 'completed date'
 
 Technologies used:
 
-
 Ruby on Rails, Postgresql, Heroku, Git Hub
-
-HTML, CSS, Ruby
-Heroku, Git Hub
-
 
 User Stories:
 

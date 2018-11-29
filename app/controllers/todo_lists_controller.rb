@@ -3,7 +3,7 @@ class TodoListsController < OpenReadController
 
   # GET /todo_lists
   def index
-    @todo_lists = TodoList.all
+    @todo_lists = current_user.todo_lists
 
     render json: @todo_lists
   end
