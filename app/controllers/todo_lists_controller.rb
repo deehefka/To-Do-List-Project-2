@@ -46,7 +46,7 @@ class TodoListsController < OpenReadController
 
   # Only allow a trusted parameter "white list" through.
   def todo_list_params
-    params.require(:todo_list).permit(:title, :description, :user_id)
+    params.require(:todo_list).permit(:title, :description, :user_i)
   end
 
   private :set_todo_list, :todo_list_params
