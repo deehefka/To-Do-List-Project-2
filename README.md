@@ -7,8 +7,9 @@ This project will be an attempt to create a front and back end that creates to-d
 
 Unsolved problems:
 
-I think I got everything working...?
-I'd like to add more to this eventually - maybe a calendar or way to add a 'completed date'
+** Add more to this eventually - maybe a calendar or way to add a 'completed date'
+** To-Do List items to pop up on click, not after show all button is clicked
+** For each individual user, have the to-dos start counting at 1 and go up... Right now, if one user has 12 to-dos, another user logs in and their first to-do would start at 13
 
 Technologies used:
 
